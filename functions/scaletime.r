@@ -127,14 +127,14 @@ scaletime <- function(d, id, unit, year, group, method = "weighted", k = 10, min
     scale_y_continuous(breaks = seq(min, max, by = 2))+
     guides(size = guide_legend(order = 1, size_label)) + # , color = guide_legend("Continent")
     theme(legend.position = 'right'
-          ,text = element_text(color = "#444444")
+          ,text = element_text(color = "#444444", size = 15)
           ,panel.background = element_rect(fill = '#FFFFFF')
           ,plot.title = element_text(size = 16)
-          ,axis.title = element_text(size = 12, color = '#555555')
+          ,axis.title = element_text(size = 13, color = '#555555')
           ,axis.title.y = element_text(vjust = 1, angle = 90)
           ,axis.title.x = element_text(hjust = .95)
-          ,axis.text.x = element_text(face = "bold", angle = 90)
-          ,axis.text.y = element_text(face = "bold")
+          ,axis.text.x = element_text(face = "bold", angle = 90, size = 13)
+          ,axis.text.y = element_text(face = "bold", size = 13)
           ,axis.line.x = element_line(color = "grey50", size = 0.5)
           ,panel.grid.major.x = element_blank() 
           ,panel.grid.major.y = element_line( size = .2, color = "grey90" ) 
@@ -168,7 +168,7 @@ scaletime <- function(d, id, unit, year, group, method = "weighted", k = 10, min
     
     text <- paste0("Source : ", source, author)
     
-    cowplot::ggdraw(add_sub(g, fontface = "italic", size = 9, color = "black", x = 0, y = 0.5, hjust = 0, vjust = 0.5, fontfamily = "sans", lineheight = 1, label = text
+    cowplot::ggdraw(add_sub(g, fontface = "italic", size = 11, color = "black", x = 0, y = 0.5, hjust = 0, vjust = 0.5, fontfamily = "sans", lineheight = 1, label = text
                             
     ))}
   

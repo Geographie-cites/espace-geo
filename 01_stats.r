@@ -1,10 +1,31 @@
 
 library(tidyverse)
 
-eg <- read_tsv("data/db_netscity_espacegeo.tsv")
+# load the dataset
+
+eg <- read_tsv("data/netscity_espacegeo/netscity_espacegeo.tsv")
 
 ################################################################################
 
+# Number of publications
+
+eg %>%
+  distinct(id) %>%
+  nrow()
+
+# subset of publications: France
+
+fr <- eg  %>%
+  filter(country %in% c("FRANCE")) %>%
+  distinct(id) %>%
+  pull(id)
+
+# subset of publications: Paris
+
+paris <- eg  %>%
+  filter(agglo %in% c("PARIS")) %>%
+  distinct(id) %>%
+  pull(id)
 
 # Table 1
 
@@ -41,22 +62,24 @@ tab1 %>%
          "% France" = pfr, # Part d’articles signés depuis au moins une adresse en France
          "% Paris" = pparis) # Part d’articles signés depuis une adresse francilienne
 
+
+
 # Figure 1
 
 # Title of the figure:
 # L’Espace Géographique, origine géographique des articles entre 1972 et 2020 par pays. 
 
-source("scaletime.r")
+source("functions/scaletime.r")
 
-svg(paste("plots/Figure_1.svg"), width = 12, height = 7)
+svg(paste("plots/Figure_1.svg"), width = 12, height = 10)
 
 scaletime(d = eg, id = id, year = year, unit = country,  group = continent, 
           method = "complete", # unweighted 
           min = 1972, max = 2020, k = 55, graph = TRUE, colour_axis = TRUE,
           size_label = "N. de publications\nIn l'Espace Géo.",
           x_title = "Année",
-          title = "L'Espace géographique, origine des articles par pays d'après l'affiliation des auteurs", 
-          ego_level = country, caption = TRUE, source = "Scopus, Persée et Cairn (articles)", 
+          title = "L'Espace géographique, origine des articles par pays d'après l'affiliation des auteurs.", 
+          ego_level = country, caption = TRUE, source = "Scopus, Persée et Cairn (articles et positions de recherche). Comptage non fractionné.", 
           author = "\nMarion Maisonobe, 2024. Récupération des affiliations sur Persée et Cairn : Max Beligné")
 
 
@@ -67,14 +90,14 @@ dev.off()
 # Title of the figure:
 # L’Espace Géographique, origine géographique des articles entre 1972 et 2020 par agglomération.
 
-svg(paste("plots/Figure_4.svg"), width = 9, height = 6)
+svg(paste("plots/Figure_4.svg"), width = 10, height = 9)
 
 scaletime(d = eg, id = id, year = year, unit = agglo, method = "complete", ego_level = agglo,
           min = 1972, max = 2020, k = 47, graph = TRUE, group = continent, 
           size_label = "N. de publications\nIn l'Espace Géo.",
           x_title = "Année",
           title = "L'Espace géographique, origine des articles par aire urbaine d'après l'affiliation des auteurs", 
-          caption = TRUE, source = "Scopus, Persée et Cairn (articles)", 
+          caption = TRUE, source = "Scopus, Persée et Cairn (articles et positions de recherche).", 
           author = "\nMarion Maisonobe, 2024. . Récupération des affiliations sur Persée et Cairn : Max Beligné")
 
 
@@ -91,19 +114,17 @@ eg %>%
   distinct(country, continent) %>%
   count(continent)
 
+# Number of countries per world region
+eg %>%
+  distinct(country, world_bank_reg) %>%
+  count(world_bank_reg)
+
 # subset of publications: France
 
-fr <- eg  %>%
-  filter(country %in% c("FRANCE")) %>%
-  distinct(id) %>%
-  pull(id)
-
 eg  %>%
-  filter(! country %in% c("FRANCE")) %>%
+  filter(id %in% fr) %>%
   distinct(id) %>%
   nrow()
-
-nrow(distinct(eg %>% filter(!country %in% "FRANCE"), id))
 
 # share of publications from France
 
@@ -127,7 +148,7 @@ eg %>%
   filter(country %in% c("BELGIUM", "CANADA", "SWITZERLAND"))
 
 (71+55+45)/
-  nrow(distinct(a %>% filter(!country %in% "FRANCE"), id))
+  nrow(distinct(eg %>% filter(!country %in% "FRANCE"), id))
 
 # Number of publications per top country
 
@@ -137,14 +158,14 @@ eg %>%
   arrange(-n)
 
 (25+23+19+17+13+9)/
-  nrow(distinct(a %>% filter(!country %in% "FRANCE"), id))
+  nrow(distinct(eg %>% filter(!country %in% "FRANCE"), id))
 
 # subset of publications: Paris
 
-paris <- eg  %>%
-  filter(agglo %in% c("PARIS")) %>%
+eg  %>%
+  filter(id %in% paris) %>%
   distinct(id) %>%
-  pull(id)
+  nrow()
 
 # Number of agglomeration
 
