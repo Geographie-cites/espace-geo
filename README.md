@@ -19,7 +19,7 @@ Maisonobe, M., Beligné, M., & UMR Géographie-cités. (2024). Metadata and geor
 -------------------------------------------------------------------------------------------------------------------------
 ### Contenu du répertoire / Contents of the repository
 
-fr : Ce repertoire git permet de reproduire les tableaux et figures de la publication "La géographie de _L’Espace Géographique_" à partir du jeu de données Zenodo.
+fr : Ce repertoire git permet de reproduire les tableaux et figures de la publication "La géographie de _L’Espace Géographique_" à partir du jeu de données Zenodo [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14039283.svg)](https://doi.org/10.5281/zenodo.14039283)
 
 Il comprend 4 scripts, 2 fonctions, le package en cours de développement {cartigraph}, et un shapefile du monde.
 
@@ -32,7 +32,7 @@ Il comprend 4 scripts, 2 fonctions, le package en cours de développement {carti
 - "Functions/cartigraph" : un package en cours de développement pour convertir des tables de liens en graphes, les pondérer et les représenter.
 - "shp/world" : fond ce carte des pays du monde (Natural Earth data) utilisé pour dessiner la carte.
 
-en : This git repository is used to reproduce the tables and figures in "La géographie de _L’Espace Géographique_" from the Zenodo dataset: "Metadata and georeferencing of the publications in the academic journal 'L'Espace Géographique' (1972-2020) [Data set]".
+en : This git repository is used to reproduce the tables and figures in "La géographie de _L’Espace Géographique_" from the Zenodo dataset [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14039283.svg)](https://doi.org/10.5281/zenodo.14039283)
 
 It includes 4 scripts, 2 functions, the {cartigraph} package, and a shapefile of the world.
 
