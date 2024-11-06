@@ -23,7 +23,7 @@ fr : Ce repertoire git permet de reproduire les tableaux et figures de la public
 
 Il comprend 4 scripts, 2 fonctions, le package en cours de développement {cartigraph}, et un shapefile du monde.
 
-- "00_data.R": un script pour télécharger les données depuis zenodo et mettre à jour (si nécessaire) les métadonnées
+- "00_data.R": un script pour télécharger les données depuis Zenodo et mettre à jour (si nécessaire) les métadonnées
 - "01_stats.R" : un script pour calculer les pourcentages commentés dans la publication, produire le tableau 1, et les figures 1 et 4.
 - "02_map.R" : un script pour réaliser la carte de provenance des publications parues dans la revue _L'Espace Géographique_ (figure 2).
 - "03_network.R" : un script pour visualiser la géographie des co-publications sous forme d'hypergraphe (figure 3).
