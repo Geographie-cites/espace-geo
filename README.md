@@ -21,7 +21,7 @@ Maisonobe, M., Beligné, M., & UMR Géographie-cités. (2024). Metadata and geor
 -------------------------------------------------------------------------------------------------------------------------
 ### Contenu du répertoire / Contents of the repository
 
-fr : Ce repertoire git permet de reproduire les tableaux et figures de la publication "La géographie de _L’Espace Géographique_" à partir du jeu de données Zenodo.
+fr : Ce repertoire git permet de reproduire les tableaux et figures de la publication "La géographie de _L’Espace Géographique_".
 
 Il comprend 4 scripts, 2 fonctions, le package en cours de développement {cartigraph}, et un shapefile du monde.
 
@@ -36,7 +36,7 @@ Il comprend 4 scripts, 2 fonctions, le package en cours de développement {carti
 
 -------------------------------------------------------------------------------------------------------------------------
 
-en : This git repository is used to reproduce the tables and figures in "La géographie de _L’Espace Géographique_" from the Zenodo dataset.
+en : This git repository is used to reproduce the tables and figures in "La géographie de _L’Espace Géographique_".
 
 It includes 4 scripts, 2 functions, the {cartigraph} package, and a shapefile of the world.
 
