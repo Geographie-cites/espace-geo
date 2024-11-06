@@ -1,4 +1,4 @@
-# La géographie de _L'Espace Géographique_ / The geography of the academic journal _L'Espace Géographique_
+## La géographie de _L'Espace Géographique_ / The geography of the academic journal _L'Espace Géographique_
 
 fr : Script et fonctions R pour reproduire le tableau et les figures de la publication intitulée : "La géographie de _L’Espace Géographique_"
 
@@ -11,7 +11,7 @@ Maisonobe, M., Beligné, M., & UMR Géographie-cités. (2024). Metadata and geor
 en: R script and functions to reproduce the table and figures comprised in "La géographie de _L’Espace Géographique_"
 
 -------------------------------------------------------------------------------------------------------------------------
-## Contenu du répertoire / Contents of the repository
+### Contenu du répertoire / Contents of the repository
 
 fr : Ce repertoire git permet de reproduire les tableaux et figures de la publication "La géographie de _L’Espace Géographique_" à partir du jeu de données Zenodo.
 
