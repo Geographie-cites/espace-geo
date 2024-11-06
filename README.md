@@ -10,6 +10,8 @@ Maisonobe, M., Beligné, M., & UMR Géographie-cités. (2024). Metadata and geor
 
 en: R scripts and functions to reproduce the table and figures comprised in "La géographie de _L’Espace Géographique_"
 
+- Marion Maisonobe (2022). "La géographie de _L’Espace Géographique_", _L'Espace Géographique_, n°4.
+
 The data used was produced by the author in collaboration with Max Beligné and registered on Zenodo :
 
 Maisonobe, M., Beligné, M., & UMR Géographie-cités. (2024). Metadata and georeferencing of the publications in the academic journal 'L'Espace Géographique' (1972-2020) [Data set]. Zenodo. [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14039283.svg)](https://doi.org/10.5281/zenodo.14039283)
